@@ -7,7 +7,6 @@ import java.util.*;
 public class SortingFunc {
     public static List<Integer> sort(Map<Integer, BufferedReader> map) throws IOException {
         int bufferSize = map.size();
-        //List<Integer> buffer = new ArrayList<>(bufferSize);
         Map<Integer, Integer> buffer = new HashMap<>();
         List<Integer> result = new ArrayList<>();
 
@@ -17,13 +16,13 @@ public class SortingFunc {
         }
 
         do {
-
-            int place = map.keySet().stream().min(Comparator.naturalOrder()).get();
+            int place = Collections.min(map.keySet());
             int target = buffer.get(place);
-            for (int i = 0; i < buffer.size() - 1; i++) {
-                if (target > buffer.get(i + 1)) {
-                    target = buffer.get(i + 1);
-                    place = i + 1;
+            for (Map.Entry<Integer, Integer> entry:
+                 buffer.entrySet()) {
+                if(target > entry.getValue()) {
+                    target = entry.getValue();
+                    place = entry.getKey();
                 }
             }
 
