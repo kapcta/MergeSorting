@@ -16,7 +16,7 @@ public class WritingToFile {
         try(FileWriter writer = new FileWriter(creationOfFileName(args))) {
             for (Integer element:
                  list) {
-                writer.write(element);
+                writer.write(String.valueOf(element) + "\n");
             }
         } catch (IOException e) {
             e.printStackTrace();
