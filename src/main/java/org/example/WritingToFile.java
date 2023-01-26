@@ -12,22 +12,22 @@ public class WritingToFile {
 
     private static String outputFileName;
 
-    public static void write(List<Integer> list, String ...args) {
-        try(FileWriter writer = new FileWriter(creationOfFileName(args))) {
-            for (Integer element:
-                 list) {
-                writer.write(String.valueOf(element) + "\n");
+    public static <T> void write(List<T> list, String... args) {
+        try (FileWriter writer = new FileWriter(creationOfFileName(args))) {
+            for (T element :
+                    list) {
+                writer.write(element + "\n");
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Output filepath selected not found! Please check filepath");
         }
     }
 
-    private static String creationOfFileName(String @NotNull ...args) {
+    private static String creationOfFileName(String @NotNull ... args) {
         Path dir = Paths.get("/Users/milovanov/IdeaProjects/MergeSorting/src/main/java/org/example/testingFiles/");
-        for (String arg:
-             args) {
-            if(arg.contains("out") && arg.endsWith(".txt")) {
+        for (String arg :
+                args) {
+            if (arg.contains("out") && arg.endsWith(".txt")) {
                 outputFileName = dir.resolve(arg).toString();
             }
         }
