@@ -8,20 +8,20 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.*;
 
-public class FactoryOfSorting {
+public class SortingFactory {
 
-    public static <T> List<T> sorting(@NotNull List<TypesOfConsoleArguments> types, Map<Integer, BufferedReader> map) {
+    public static <T> List<T> getSortingFunc(@NotNull List<TypesOfSorting> types, Map<Integer, BufferedReader> map) {
         List<T> result = new ArrayList<>();
         try {
-            for (TypesOfConsoleArguments type :
+            for (TypesOfSorting type :
                     types) {
-                if (type == TypesOfConsoleArguments.STRING) {
+                if (type == TypesOfSorting.STRING) {
                     result = (List<T>) SortingFuncForStringValues.sort(map);
-                } else if (type == TypesOfConsoleArguments.INTEGER) {
+                } else if (type == TypesOfSorting.INTEGER) {
                     result = (List<T>) SortingFuncForIntegerValues.sort(map);
                 }
 
-                if (type == TypesOfConsoleArguments.DESCENDING) {
+                if (type == TypesOfSorting.DESCENDING) {
                     Collections.reverse(result);
                 }
             }

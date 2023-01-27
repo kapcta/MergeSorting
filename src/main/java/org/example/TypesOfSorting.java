@@ -1,6 +1,6 @@
 package org.example;
 
-public enum TypesOfConsoleArguments {
+public enum TypesOfSorting {
     ASCENDING,
     DESCENDING,
     STRING,

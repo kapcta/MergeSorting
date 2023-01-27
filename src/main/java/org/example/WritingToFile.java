@@ -12,7 +12,7 @@ public class WritingToFile {
 
     private static String outputFileName;
 
-    public static <T> void write(List<T> list, String... args) {
+    public static <T> void writeToFile(List<T> list, String... args) {
         try (FileWriter writer = new FileWriter(creationOfFileName(args))) {
             for (T element :
                     list) {
