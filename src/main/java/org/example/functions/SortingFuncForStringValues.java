@@ -4,9 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.*;
 
-public class SortingFuncForStringValues {
+public class SortingFuncForStringValues implements SortingFunc {
 
-    public static List<String> sort(Map<Integer, BufferedReader> map) throws IOException {
+    @Override
+    public List<String> sort(Map<Integer, BufferedReader> map) throws IOException {
         int bufferSize = map.size();
         Map<Integer, String> buffer = new HashMap<>();
         List<String> result = new ArrayList<>();

@@ -4,8 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.*;
 
-public class SortingFuncForIntegerValues {
-    public static List<Integer> sort(Map<Integer, BufferedReader> map) throws IOException {
+public class SortingFuncForIntegerValues implements SortingFunc {
+    @Override
+    public List<Integer> sort(Map<Integer, BufferedReader> map) throws IOException {
         int bufferSize = map.size();
         Map<Integer, Integer> buffer = new HashMap<>();
         List<Integer> result = new ArrayList<>();

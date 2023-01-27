@@ -1,33 +1,23 @@
 package org.example;
 
+import org.example.functions.SortingFunc;
 import org.example.functions.SortingFuncForIntegerValues;
 import org.example.functions.SortingFuncForStringValues;
-import org.jetbrains.annotations.NotNull;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.util.*;
+import java.util.List;
 
 public class SortingFactory {
 
-    public static <T> List<T> getSortingFunc(@NotNull List<TypesOfSorting> types, Map<Integer, BufferedReader> map) {
-        List<T> result = new ArrayList<>();
-        try {
-            for (TypesOfSorting type :
-                    types) {
-                if (type == TypesOfSorting.STRING) {
-                    result = (List<T>) SortingFuncForStringValues.sort(map);
-                } else if (type == TypesOfSorting.INTEGER) {
-                    result = (List<T>) SortingFuncForIntegerValues.sort(map);
-                }
-
-                if (type == TypesOfSorting.DESCENDING) {
-                    Collections.reverse(result);
-                }
-            }
-        } catch (IOException e) {
-            System.out.println("Issue has been occurred during file reading");
+    public static SortingFunc getSortingFunc(List<TypesOfSorting> types) {
+        SortingFunc sortingFunc = null;
+        switch (types.get(0)) {
+            case STRING:
+                sortingFunc = new SortingFuncForStringValues();
+                break;
+            case INTEGER:
+                sortingFunc = new SortingFuncForIntegerValues();
+                break;
         }
-        return result;
+        return sortingFunc;
     }
 }
