@@ -10,8 +10,17 @@ import java.util.Map;
 
 public class ChooserOfSortingMethod {
 
-    public static List<?> getResultChoseFromSortingMethod(List<TypesOfSorting> types, SortingFunc sortingFunc, Map<Integer, BufferedReader> map) {
-        List<?> result = null;
+    private List<?> result;
+
+    public ChooserOfSortingMethod(List<?> result) {
+        this.result = result;
+    }
+
+    public List<?> getResult() {
+        return result;
+    }
+
+    public void sortingMethod(List<TypesOfSorting> types, SortingFunc sortingFunc, Map<Integer, BufferedReader> map) {
         try {
             if (types.get(1) == TypesOfSorting.DESCENDING) {
                 result = sortingFunc.sort(map);
@@ -22,6 +31,5 @@ public class ChooserOfSortingMethod {
         } catch (IOException e) {
             System.out.println("Issue has been occur during file reading! Please check types of reading parameters");
         }
-        return result;
     }
 }
