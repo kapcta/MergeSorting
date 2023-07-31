@@ -19,8 +19,7 @@ public class FileReaders {
         return readers;
     }
 
-    public void creationOfFileReaders(List<String> inputFileNames) {
-
+    public void createFileReaders(List<String> inputFileNames) {
         int key = 0;
 
         for (String inputFileName :

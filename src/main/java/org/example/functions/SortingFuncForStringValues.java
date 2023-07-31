@@ -8,13 +8,8 @@ public class SortingFuncForStringValues implements SortingFunc {
 
     @Override
     public List<String> sort(Map<Integer, BufferedReader> map) throws IOException {
-        int bufferSize = map.size();
-        Map<Integer, String> buffer = new HashMap<>();
         List<String> result = new ArrayList<>();
-
-        for (int k = 0; k < bufferSize; k++) {
-            buffer.put(k, map.get(k).readLine());
-        }
+        Map<Integer, String> buffer = initializeOfBuffer(map);
 
         do {
             int place = Collections.min(map.keySet());
@@ -41,5 +36,16 @@ public class SortingFuncForStringValues implements SortingFunc {
         } while (!map.isEmpty());
 
         return result;
+    }
+
+    private Map<Integer, String> initializeOfBuffer(Map<Integer, BufferedReader> map) throws IOException {
+        int bufferSize = map.size();
+        Map<Integer, String> buffer = new HashMap<>();
+
+        for (int k = 0; k < bufferSize; k++) {
+            buffer.put(k, map.get(k).readLine());
+        }
+
+        return buffer;
     }
 }
