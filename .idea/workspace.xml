@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f334e34-0196-4767-8b9b-5377d54f79ae" name="Changes" comment="Final cleared working version without any problems">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/MergeSorting.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6f334e34-0196-4767-8b9b-5377d54f79ae" name="Changes" comment="Final cleared working version without any problems. Program has been re-written in compliance with the principles of OOP.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChooserOfSortingMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChooserOfSortingMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FileReaders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FileReaders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SortingFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SortingFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/functions/SortingFuncForIntegerValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/functions/SortingFuncForIntegerValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/functions/SortingFuncForStringValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/functions/SortingFuncForStringValues.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,30 +70,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/Users/milovanov/IdeaProjects/MergeSorting/src/main/java/org/example/testingFiles",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/org/example/testingFiles" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/org/example/testingFiles" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example" />
@@ -200,9 +175,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SortingFactoryTest" />
-        <item itemvalue="Gradle.SortingFuncForIntegerValuesTest" />
         <item itemvalue="Gradle.SortingFuncForIntegerValuesTest.sort" />
+        <item itemvalue="Gradle.SortingFuncForIntegerValuesTest" />
+        <item itemvalue="Gradle.SortingFactoryTest" />
+        <item itemvalue="Gradle.SortingFuncForIntegerValuesTest.sort" />
+        <item itemvalue="Gradle.SortingFuncForIntegerValuesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -214,8 +191,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672746422584</updated>
-      <workItem from="1679909230804" duration="411000" />
-      <workItem from="1690438593018" duration="7501000" />
     </task>
     <task id="LOCAL-00001" summary="Final cleared working version without any problems">
       <created>1674836411141</created>
@@ -224,11 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1674836411141</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Final cleared working version without any problems. Program has been re-written in compliance with the principles of OOP.">
+      <created>1675598356790</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675598356790</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -243,80 +222,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Final cleared working version without any problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final cleared working version without any problems" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>34</line>
-          <properties class="org.example.CommandLineParser" method="createInputFileNames">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>55</line>
-          <properties class="org.example.CommandLineParser" method="createOutputFileName">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/CommandLineParser.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Final cleared working version without any problems. Program has been re-written in compliance with the principles of OOP." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final cleared working version without any problems. Program has been re-written in compliance with the principles of OOP." />
   </component>
 </project>
