@@ -7,17 +7,13 @@ import java.util.*;
 public class SortingFuncForIntegerValues implements SortingFunc {
     @Override
     public List<Integer> sort(Map<Integer, BufferedReader> map) throws IOException {
-        int bufferSize = map.size();
-        Map<Integer, Integer> buffer = new HashMap<>();
+        Map<Integer, Integer> buffer = initializeOfBuffer(map);
         List<Integer> result = new ArrayList<>();
-
-        for (int k = 0; k < bufferSize; k++) {
-            buffer.put(k, Integer.parseInt(map.get(k).readLine()));
-        }
 
         do {
             int place = Collections.min(map.keySet());
             int target = buffer.get(place);
+
             for (Map.Entry<Integer, Integer> entry :
                     buffer.entrySet()) {
                 if (target > entry.getValue()) {
@@ -40,5 +36,16 @@ public class SortingFuncForIntegerValues implements SortingFunc {
         } while (!map.isEmpty());
 
         return result;
+    }
+
+    private Map<Integer, Integer> initializeOfBuffer(Map<Integer, BufferedReader> map) throws IOException {
+        int bufferSize = map.size();
+        Map<Integer, Integer> buffer = new HashMap<>();
+
+        for (int k = 0; k < bufferSize; k++) {
+            buffer.put(k, Integer.parseInt(map.get(k).readLine()));
+        }
+        
+        return buffer;
     }
 }

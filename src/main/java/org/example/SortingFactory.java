@@ -10,7 +10,8 @@ public class SortingFactory {
 
     public static SortingFunc getSortingFunc(List<TypesOfSorting> types) {
         SortingFunc sortingFunc = null;
-        switch (types.get(0)) {
+
+        switch (getParameterValuesForSorting(types)) {
             case STRING:
                 sortingFunc = new SortingFuncForStringValues();
                 break;
@@ -19,5 +20,9 @@ public class SortingFactory {
                 break;
         }
         return sortingFunc;
+    }
+
+    private static TypesOfSorting getParameterValuesForSorting(List<TypesOfSorting> types) {
+        return types.get(0);
     }
 }

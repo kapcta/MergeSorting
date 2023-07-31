@@ -3,27 +3,26 @@ package org.example;
 import org.example.functions.SortingFunc;
 
 import java.io.BufferedReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         CommandLineParser parser = new CommandLineParser(args);
-        parser.creationOfSortingMethodsList();
-        parser.creationOfInputFileNames();
-        parser.creationOfOutputFileName();
+        parser.createSortingMethodsList();
+        parser.createInputFileNames();
+        parser.createOutputFileName();
 
         FileReaders fileReaders = new FileReaders();
-        fileReaders.creationOfFileReaders(parser.getInputFileNames());
+        fileReaders.createFileReaders(parser.getInputFileNames());
 
         Map<Integer, BufferedReader> readers = fileReaders.getReaders();
         List<TypesOfSorting> typesOfSorting = parser.getListOfTypes();
 
         SortingFunc sortingFunc = SortingFactory.getSortingFunc(typesOfSorting);
 
-        ChooserOfSortingMethod chooserOfSortingMethod = new ChooserOfSortingMethod(new ArrayList<>());
-        chooserOfSortingMethod.sortingMethod(typesOfSorting, sortingFunc, readers);
+        ChooserOfSortingMethod chooserOfSortingMethod = new ChooserOfSortingMethod(new ArrayList<>(), sortingFunc, readers, typesOfSorting);
+        chooserOfSortingMethod.chooseSortingMethod();
 
         List<?> result = chooserOfSortingMethod.getResult();
 

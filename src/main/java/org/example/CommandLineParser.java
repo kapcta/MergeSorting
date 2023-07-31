@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class CommandLineParser {
 
     private final String[] args;
@@ -30,30 +31,40 @@ public class CommandLineParser {
         return inputFileNames;
     }
 
-    public void creationOfInputFileNames() {
-        Path dir = Paths.get("/Users/milovanov/IdeaProjects/MergeSorting/src/main/java/org/example/testingFiles/");
+    public void createInputFileNames() {
+        Path dir = Paths.get("../MergeSorting/src/main/java/org/example/testingFiles/");
 
         for (String arg :
                 args) {
-            if (arg.endsWith(".txt") && !arg.contains("out.txt"))
+            if (isInputFileNames(arg)) {
                 inputFileNames.add(dir.resolve(arg).toString());
+            }
         }
     }
 
-    public void creationOfOutputFileName() {
-        Path dir = Paths.get("/Users/milovanov/IdeaProjects/MergeSorting/src/main/java/org/example/testingFiles/");
+    private boolean isInputFileNames(String arg) {
+        return arg.endsWith(".txt") && !arg.contains("out.txt");
+    }
+
+    public void createOutputFileName() {
+        Path dir = Paths.get("../MergeSorting/src/main/java/org/example/testingFiles/");
+
         for (String arg :
                 args) {
-            if (arg.contains("out") && arg.endsWith(".txt")) {
+            if (isOutputFile(arg)) {
                 outputFileName = dir.resolve(arg).toString();
             }
         }
     }
 
-    public void creationOfSortingMethodsList() {
+    private boolean isOutputFile(String arg) {
+        return arg.contains("out") && arg.endsWith(".txt");
+    }
+
+    public void createSortingMethodsList() {
         for (String arg :
                 args) {
-            if (!arg.endsWith(".txt")) {
+            if (isSortingParameter(arg)) {
                 switch (arg) {
                     case "-s":
                         listOfTypes.add(TypesOfSorting.STRING);
@@ -73,5 +84,9 @@ public class CommandLineParser {
 
         if (listOfTypes.size() == 1)
             listOfTypes.add(TypesOfSorting.ASCENDING);
+    }
+
+    private boolean isSortingParameter(String arg) {
+        return !arg.endsWith(".txt");
     }
 }
